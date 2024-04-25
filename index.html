@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="img/favicon-32x32.png" type="image/x-icon">
+    <title>Rock ⚫, Paper 🧻, Scissors ✂</title>
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <header>
+            <div class="logo-box flex">
+                <img src="img/logo.svg" alt="Logo">
+            </div>
+            <div class="score-container flex-end">
+                <div class="score-card">
+                    <div class="score-title barlow-semi-condensed-semibold">Score</div>
+                    <div id="score" class="score flex barlow-semi-condensed-bold">0</div>
+                </div>
+            </div>
+        </header>
+        <!-- GAME -->
+        <div class="game-container flex">
+            <!-- GAME BOX -->
+            <div class="game-box">
+                <div class="first-row flex">
+                    <div id="paper" class="paper hover-transition option-game flex"><img src="img/icon-paper.svg" alt="Paper"></div>
+                    <div id="scissors" class="scissors hover-transition option-game flex"><img src="img/icon-scissors.svg" alt="Scissors"></div>
+                </div>
+                <div class="second-row flex">
+                    <div id="rock" class="rock hover-transition option-game flex"><img src="img/icon-rock.svg" alt="Rock"></div>
+                </div>
+            </div>
+            <!-- RESULT BOX -->
+            <div class="result-box flex" style="display: none;">
+                <div class="first-column flex flex-column">
+                    <div class="info-title barlow-semi-condensed-bold"><span>you picked</span></div>
+                    <div id="userHand" class="hover-transition option-game flex"><img src="img/icon-paper.svg" alt="Paper"></div>
+                </div>
+                <div class="second-column flex flex-column">
+                    <div class="result-text barlow-semi-condensed-bold"></div>
+                    <div class="playAgainBox"><button id="playAgain" class="playAgainText barlow-semi-condensed-bold">play again</button></div>
+                </div>
+                <div class="third-column flex flex-column">
+                    <div class="info-title barlow-semi-condensed-bold"><span>the house picked</span></div>
+                    <div id="cpuHand" class="hover-transition option-game flex"><img src="img/icon-rock.svg" alt="Rock"></div>
+                </div>
+            </div>
+        </div>
+        <!-- RULES -->
+        <div class="rules-box flex-end">
+            <div class="rules hover-transition barlow-semi-condensed-semibold">rules</div>
+        </div>
+        <!-- MODAL-->
+        <div id="ventanaModal" class="modal-container">
+            <div class="modal">
+                <div class="modal-header">
+                    <div class="modal-title">
+                        <h1 class="rules-modal-title barlow-semi-condensed-bold">Rules</h1>
+                    </div>
+                    <div class="close-modal-box flex-end">
+                        <img id="close-modal" src="img/icon-close.svg" alt="Close icon">
+                    </div>
+                </div>
+                <div class="rules-modal-box flex">
+                    <img src="img/image-rules.svg" alt="Rules">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
