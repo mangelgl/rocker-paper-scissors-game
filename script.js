@@ -9,6 +9,8 @@ const rulesButton = document.querySelector('.rules');
 const modalWindow = document.querySelector('#ventanaModal');
 const closeButton = document.querySelector('#close-modal');
 
+score.innerHTML = '<span>0</span>';
+
 /**
  * Ventana modal
  */
@@ -33,7 +35,6 @@ window.addEventListener('click',function(event) {
  */
 [paperButton, rockButton, scissorsButton].forEach( btn => {
     btn.addEventListener('click', () => {
-        console.clear();
         userHand = btn.id, 
         cpuHand = generateRandomHand(),
         vecesJugado += 1;
@@ -61,7 +62,7 @@ function selectWinner(userHand, cpuHand) {
 
     if ( userHand === cpuHand ) {
         colorBotonPlayAgain = 'win';
-        resultText.innerText = "IT'S A DRAW";
+        resultText.innerText = "DRAW";
         playAgainText.classList.add('winTextColor');
     }
     
@@ -115,6 +116,8 @@ function cambiarTablero(modo, userHand, cpuHand) {
         tableroJuego.style.display = 'none';
         tableroSeleccion.style.display = 'block';
     }
+
+    document.querySelector('.result-text').classList.add('tracking-in-expand-fwd');
 }
 
 function cambiarSeleccion(userHand, cpuHand) {
