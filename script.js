@@ -1,3 +1,15 @@
+const widthScreen = window.screen.width;
+const heightScreen = window.screen.height;
+
+if ( widthScreen < 1920 || heightScreen < 1080 ) {
+    document.getElementsByTagName('body')[0].innerHTML = 
+    '<div style="width: 100vw; height: 100vh;" class="flex flex-col"><h1 style="color: white;">Próximamente para nuevos dispositivos...</h1></div>';
+    
+    document.getElementsByTagName('body')[0].style.width = '100vw';
+    document.getElementsByTagName('body')[0].style.margin = 0;
+    document.getElementsByTagName('body')[0].style.padding = 0;
+}
+
 const hands = ["rock", "paper", "scissors"];
 const winners = {
     "rock" : "scissors",
